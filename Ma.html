@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Mon site</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="Ma.css">
+	<script type="text/javascript">
+		const signUpButton = document.getElementById('signUp');
+const signInButton = document.getElementById('signIn');
+const container = document.getElementById('container');
+
+signUpButton.addEventListener('click', () => {
+    container.classList.add('right-panel-active');
+});
+
+signInButton.addEventListener('click', () => {
+    container.classList.remove('right-panel-active');
+});
+
+	</script>
+</head>
+<body>
+	<div class="container" id="container">
+    <div class="form-container sign-up-container">
+        <!-- Sign Up form code goes here -->
+    </div>
+    <div class="form-container sign-in-container">
+        <!-- Sign In form code goes here -->
+    </div>
+    <div class="overlay-container">
+        <!-- The overlay code goes here -->
+    </div>
+</div>
+<div class="form-container sign-up-container">
+    <form action="#">
+        <h1>Créer un compte</h1>
+        <div class="social-container">
+            <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+            <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+        <span>Ou utilisez votre email pour vous inscrire</span>
+        <input type="text" placeholder="Name" />
+        <input type="email" placeholder="Email" />
+        <input type="password" placeholder="Password" />
+        <button>S'inscrire</button>
+    </form>
+</div>
+<div class="form-container sign-in-container">
+    <form action="#">
+        <h1>S'identifier</h1>
+        <div class="social-container">
+            <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+            <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+        <span>Ou utilisez votre compte</span>
+        <input type="email" placeholder="Email" />
+        <input type="password" placeholder="Password" />
+        <a href="#">Mot de passe oublié?</a>
+        <button>S'identifier</button>
+    </form>
+</div>
+<div class="overlay-container">
+    <div class="overlay">
+        <div class="overlay-panel overlay-left">
+            <h1>Content de te revoir!</h1>
+            <p>
+                rester connecté avec nous s'il vous plait connectez-vous avec vos informations personnelles
+            </p>
+            <button class="ghost" id="signIn">S'identifier</button>
+        </div>
+        <div class="overlay-panel overlay-right">
+            <h1>Salut, l'amis!</h1>
+            <p class="overla">Il faut que rentres tes informations personnelles pour acheter un billet et commencez votre voyage avec nous </p>
+            <button class="ghost" id="signUp">S'inscrire</button>
+        </div>
+    </div>
+</div>
+
+
+</body>
+</html>
